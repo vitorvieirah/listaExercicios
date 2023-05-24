@@ -7,6 +7,6 @@ public class Ex7 {
             Scanner sc = new Scanner(System.in);
             double numero = sc.nextDouble();
             DecimalFormat formato = new DecimalFormat("#");
-            System.out.println(formato.format(numero));
+           
     }
 }
