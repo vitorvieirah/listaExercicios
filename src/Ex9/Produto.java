@@ -1,3 +1,5 @@
+package Ex9;
+
 public class Produto {
     private String nome;
 
@@ -18,7 +20,7 @@ public class Produto {
     }
 
     public String  getInfo(){
-       return "NOME: " + getNome() + "VALOR: " + getValor();
+       return "NOME: " + getNome() + " " + "VALOR: " + getValor();
     }
 
     public static Produto criar (String nome, double valor){

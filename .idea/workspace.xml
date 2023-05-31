@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex9.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProdutoArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Teste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/ProdutoArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/ProdutoArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex9/Ex9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex9/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProdutoArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex9/ProdutoArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,14 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex9">
+  <component name="RunManager" selected="Application.Ex10">
+    <configuration name="Ex10" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex10" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Ex7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex7" />
       <module name="listaExercicio" />
@@ -59,7 +69,14 @@
       </method>
     </configuration>
     <configuration name="Ex9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex9" />
+      <option name="MAIN_CLASS_NAME" value="Ex9.Ex9" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Teste" />
       <module name="listaExercicio" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,7 +97,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex10" />
         <item itemvalue="Application.Ex9" />
+        <item itemvalue="Application.Teste" />
         <item itemvalue="Application.Ex7" />
         <item itemvalue="Application.Ex8" />
       </list>
