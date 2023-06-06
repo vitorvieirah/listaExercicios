@@ -1,4 +1,6 @@
 package Ex11;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class RepositoryPessoa {
     protected int quantidadeMulheres;
@@ -17,21 +19,22 @@ public abstract class RepositoryPessoa {
         }
         return pessoa;
     }
-    public static Pessoa getMaiorAltura() {
+    public static String getMaiorMenorAltura() {
         int pessoaAlta = 0;
-        int comparadorMaior = 0;
-        int comparadoMenor = 0;
-        int pessoaMenor;
+        double comparadorMaior = 0;
+        double comparadoMenor = 0;
+        int pessoaMenor = 0;
         for (int i = 0; i < pessoas.length; i++) {
             if (pessoas[i].getAltura() > comparadorMaior) {
                 comparadorMaior = pessoas[i].getAltura();
                 pessoaAlta = pessoas[i].getId();
             }
-            if(pessoas[i].getAltura() < comparadoMenor)[
-                    comparadoMenor = pessoas[i].getAltura();
-                    pessoaMenor = pessoas[i].getId();
+            if(pessoas[i].getAltura() < comparadoMenor) {
+                comparadoMenor = pessoas[i].getAltura();
+                pessoaMenor = pessoas[i].getId();
+            }
         }
-        return getPessoa(pessoaAlta);
+        return "MAIOR ALTURA: " + getPessoa(pessoaAlta).getAltura() + "MENOR ALTURA: " + getPessoa(pessoaMenor).getAltura();
     }
 
     public static int mediaAlturaHomens(){
