@@ -11,16 +11,20 @@ public abstract class Funcoes {
     }
 
     public static String  caixaEletronico(int valor){
+        if(valor > 600){
+            System.out.println("O VALOR MAXIMO É 600");
+            System.exit(0);
+        }
          int unidade = unidade(valor);
          int dezena = dezena(valor);
          int centena = centena(valor);
-         return
+         return validacaoNotas(centena, dezena, unidade);
     }
     public static int unidade(int valor){
-        return valor = ((valor / 10)*10) - valor;
+        return valor = valor - ((valor / 10)*10);
     }
     public static int dezena(int valor){
-        return valor = ((valor / 100)*10) - valor / 10;
+        return valor = (((valor / 100)*10) - valor / 10)*-1;
     }
     public static int centena(int valor){
         return valor = valor/100;
@@ -45,5 +49,32 @@ public abstract class Funcoes {
                 nota10 = 4;
             }
         }
+        if (dezena < 5){
+            nota10 = dezena;
+        }
+        if(unidade >=5){
+            nota5 = 1;
+            if(unidade == 6){
+                nota1 = 1;
+            }else if(unidade == 7){
+                nota1 = 2;
+            }else if(unidade == 8){
+                nota1 = 3;
+            }else if(unidade == 9){
+                nota1 = 4;
+            }
+        }else if (unidade < 5){
+            if(unidade == 4){
+                nota1 = 4;
+            }else if(unidade == 3){
+                nota1 = 3;
+            }else if (unidade == 2){
+                nota1 = 2;
+            }else if (unidade == 1){
+                nota1 = 1;
+            }
+        }
+        return "NOTAS DE 100: " + nota100 + " " + "NOTAS DE 50: " + nota50 + " " + "NOTAS DE 10: " + nota10
+                + " " + "NOTAS DE 5: " + nota5 + " " + "NOTAS DE 1: " + nota1;
     }
 }

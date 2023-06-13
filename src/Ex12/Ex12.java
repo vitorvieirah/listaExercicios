@@ -5,6 +5,6 @@ public class Ex12 {
     // As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais.
     // O programa não deve se preocupar com a quantidade de notas existentes na máquina.
     public static void main(String[] args) {
-
+        System.out.println(Funcoes.caixaEletronico(Funcoes.menuInicial()));
     }
 }
