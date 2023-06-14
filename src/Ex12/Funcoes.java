@@ -34,8 +34,6 @@ public abstract class Funcoes {
         int nota5 = 0;
         int nota10 = 0;
         int nota50 = 0;
-        int nota100 = 0;
-        nota100 = centena;
         //valida dezena
         if (dezena >= 5){
             nota50 = 1;
@@ -74,7 +72,7 @@ public abstract class Funcoes {
                 nota1 = 1;
             }
         }
-        return "NOTAS DE 100: " + nota100 + " " + "NOTAS DE 50: " + nota50 + " " + "NOTAS DE 10: " + nota10
+        return "NOTAS DE 100: " + centena + " " + "NOTAS DE 50: " + nota50 + " " + "NOTAS DE 10: " + nota10
                 + " " + "NOTAS DE 5: " + nota5 + " " + "NOTAS DE 1: " + nota1;
     }
 }
