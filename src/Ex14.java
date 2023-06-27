@@ -38,7 +38,6 @@ public class Ex14 {
                     hora += 1;
                 }
             }
-            else{
                 while(horasInicio < horasFinais){
                     if(horasInicio == 23){
                         horasInicio = 0;
@@ -46,14 +45,28 @@ public class Ex14 {
                     horasInicio += 1;
                     hora +=1;
                 }
-                while (minutosInicio < minutosFinais){
-                    if(minutosInicio == 60){
-                        minutosInicio = 0;
+                if(minutosInicio > minutosFinais){
+                    while (minutosInicio > minutosFinais){
+                        if(minutosInicio == 60){
+                            minutosInicio = 0;
+                        }
+                        minutosInicio += 1;
+                        minutos += 1;
                     }
-                    minutosInicio +=1;
-                    minutos +=1;
+                    while (minutosInicio < minutosFinais){
+                        minutosInicio += 1;
+                        minutos += 1;
+                    }
+                }else {
+                    while (minutosInicio < minutosFinais) {
+                        if (minutosInicio == 60) {
+                            minutosInicio = 0;
+                        }
+                        minutosInicio += 1;
+                        minutos += 1;
+                    }
                 }
-            }
+
         return "HORAS: " + hora + "   MINUTOS: " + minutos;
     }
 
