@@ -12,22 +12,16 @@ public class Ex15 {
 
     public static String calculoTempo(int tempo){
         int minutos = tempo / 60;
-        int hora = minutos;
-
-        if(minutos >= 60){
-            
+        int hora = 0;
+        while (minutos >= 60){
+            minutos -= 60;
+            hora += 1;
         }
-
-
-
+        minutos = tempo /60 ;
         return "HORAS: " + hora + "  MINUTOS: " + minutos + "  SEGUNDOS:  " + tempo;
     }
 
-
-
-
-
     public static void main(String[] args) {
-
+        System.out.println(menu());
     }
 }
