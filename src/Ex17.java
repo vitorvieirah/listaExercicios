@@ -12,13 +12,15 @@ public class Ex17 {
     }
 
     public static String  fatorial(int numero){
-        int numResultado = 0;
-        int numOriginal = numero;
-        while(numero > 0) {
-            numero = numero - 1;
-        
+        int resto = 1;
+        int [] fatorial = new int[numero];
+        for (int i = 0; i < numero; i++) {
+            fatorial[i] = numero - i;
         }
-        return "O RESULTADO DE:  " + numero + " ! " + "  É:  " + numResultado;
+        for (int i = 0; i < fatorial.length; i++) {
+             resto = resto * fatorial[i];
+        }
+        return "O RESULTADO DE:  " + numero + "! " + "  É:  " + resto;
     }
     public static void main(String[] args) {
         System.out.println(menu());
