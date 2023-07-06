@@ -1,8 +1,6 @@
 package Ex11;
-import java.util.ArrayList;
-import java.util.List;
 
-public abstract class RepositoryPessoa {
+public abstract class PessoaRepository {
     protected int quantidadeMulheres;
     static Pessoa [] pessoas = new Pessoa[10];
 

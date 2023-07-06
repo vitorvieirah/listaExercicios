@@ -1,6 +1,5 @@
 package Ex11;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Ex11 {
@@ -14,13 +13,13 @@ public class Ex11 {
             System.out.println("Digite respectivamente o nome da pessoa, sexo e altura");
             Pessoa pessoa = new Pessoa();
             pessoa.setInfo(sc.next(), sc.next(), sc.nextDouble());
-            RepositoryPessoa.setPessoas(pessoa , i);
+            PessoaRepository.setPessoas(pessoa , i);
         }
     }
     public static void infoFinal(){
-        System.out.println("AS ALTURAS SÃO RESPECTIVAMENTE: " + RepositoryPessoa.getMaiorMenorAltura());
-        System.out.println("A MÉDIA DE ALTURA DOS HOMENS É: " + RepositoryPessoa.mediaAlturaHomens());
-        System.out.println("O NUMERO DE MULHERES É: " + RepositoryPessoa.numeroMulheres());
+        System.out.println("AS ALTURAS SÃO RESPECTIVAMENTE: " + PessoaRepository.getMaiorMenorAltura());
+        System.out.println("A MÉDIA DE ALTURA DOS HOMENS É: " + PessoaRepository.mediaAlturaHomens());
+        System.out.println("O NUMERO DE MULHERES É: " + PessoaRepository.numeroMulheres());
     }
     public static void main(String[] args) {
         menuCadastro();
