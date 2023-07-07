@@ -18,9 +18,11 @@ public class Ex21 {
         int tempo = 0;
         while (massa > 0.5){
             tempo += 1;
+            int tempo2 = 0;
             if(tempo == 50){
+                tempo = 0;
+                tempo2 += 1;
                 double metade = massa / 2;
-
                 massaFinal = massa - metade;
             }
         }
@@ -32,6 +34,6 @@ public class Ex21 {
         return "MASSA INICIAL: " + massa + " MASSA FINAL: " + massaFinal + " TEMPO: HORAS: " + horas + " MINUTOS: " +  minutos + " SEGUNDOS: " + segundos;
     }
     public static void main(String[] args) {
-
+        System.out.println(menu());
     }
 }
