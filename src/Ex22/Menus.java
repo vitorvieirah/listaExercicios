@@ -15,8 +15,20 @@ public abstract class Menus {
         return sc.nextInt();
     }
 
-    public static String menuCadastro(){
+    public static void menuCadastro(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("DIGITE A QUANTIDADE DE CRIANÇAS NASCIDAS NO PERIODO DA PESQUISA");
+        int criancasNascidas = sc.nextInt();
+        System.out.println("DIGITE A QUANTIDADE DE CRIANÇAS MORTAS");
+        for (int i = 0; i < (sc.nextInt() + criancasNascidas); i++) {
+            System.out.println("DIGITE O SEXO DA CRIANÇA E DEPOIS A IDADE DELA (EM MESES)");
+            CriancaRepository.addCriancas(Crianca.criar(sc.next(), sc.nextInt()));
+        }
+        System.out.println("PESQUISA CADASTRADA COM SUCESSO!");
+    }
 
+    public static void menuGetPesquisa(){
+        
     }
 
 
