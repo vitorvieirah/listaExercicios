@@ -18,7 +18,7 @@ public abstract class CriancaRepository {
                 mortes += 1;
             }
         }
-        return total / (mortes * 100);
+        return (mortes * 100) / total;
     }
 
     public static int getPorcetagemMasculino() {
@@ -29,7 +29,7 @@ public abstract class CriancaRepository {
                 porcetagem += 1;
             }
         }
-        return total / (porcetagem * 100);
+        return (porcetagem * 100)/ total;
     }
 
     public static int getCriancasIdade() {
@@ -40,6 +40,10 @@ public abstract class CriancaRepository {
             }
         }
         return total;
+    }
+
+    public static void deletar (){
+        criancas.clear();
     }
 }
 

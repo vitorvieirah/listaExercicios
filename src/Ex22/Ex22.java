@@ -15,6 +15,17 @@ public class Ex22 {
 
 
     public static void main(String[] args) {
-
+        while (true) {
+            switch (Menus.menuInical()) {
+                case 1:
+                    Menus.menuCadastro();
+                    break;
+                case 2:
+                    Menus.menuGetPesquisa();
+                    break;
+                case 3:
+                    Menus.menuDeletar();
+            }
+        }
     }
 }
