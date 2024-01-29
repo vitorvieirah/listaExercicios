@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="" />
+    <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Annotations/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Annotations/MyAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex22.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex23.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex24.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex25.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex26.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OrdenandoListAlfabeitca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Teste/ObejectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Teste/ObjectTeste2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Teste/Teste.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/testeT/ClasseB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/testeT/ClasseC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/testeT/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/testeT/Teste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Teste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex22/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex22/Menus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teste.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -32,49 +53,43 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Programação/Alura/screenmatch/screenmatch&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/REPOSITÓRIOS/gerenciador-society&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex21">
-    <configuration name="Ex17" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex17" />
-      <module name="listaExercicio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex18" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex18" />
+  <component name="RunManager" selected="Application.Ex28">
+    <configuration name="Ex23" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex23" />
       <module name="listaExercicio" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex19" />
+    <configuration name="Ex24" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex24" />
       <module name="listaExercicio" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex20" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex20" />
+    <configuration name="Ex26" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex26" />
       <module name="listaExercicio" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex21" />
+    <configuration name="Ex27" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex27" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex28" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex28" />
       <module name="listaExercicio" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ex21" />
-        <item itemvalue="Application.Ex20" />
-        <item itemvalue="Application.Ex19" />
-        <item itemvalue="Application.Ex18" />
-        <item itemvalue="Application.Ex17" />
+        <item itemvalue="Application.Ex28" />
+        <item itemvalue="Application.Ex27" />
+        <item itemvalue="Application.Ex26" />
+        <item itemvalue="Application.Ex24" />
+        <item itemvalue="Application.Ex23" />
       </list>
     </recent_temporary>
   </component>
