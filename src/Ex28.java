@@ -3,13 +3,13 @@ import java.util.*;
 public class Ex28 {
 
    public static char[] strings;
-   public static Set<String> stringSet = new HashSet<>();
-   public static int cont = 0;
-   public static int contAspasD = 2;
-   public static int contAspas = 2;
-   public static int contEspa = 0;
-   public static int contTra = 0;
-   public static String name = "";
+   public static Set<String> stringSet;
+   public static int cont;
+   public static int contAspasD;
+   public static int contAspas;
+   public static int contEspa;
+   public static int contTra;
+   public static String name;
 
     public static void main(String[] args) {
         String ex = "Jon Stark se promenait avec Arya Stark et Claude \"Evil\" Baratheon. En croisant Jean Targaryen et Christine Frey, " +
@@ -22,11 +22,24 @@ public class Ex28 {
         String ex5 = "Francis \"Francis\" Tyrell. Arya Stark et";
         String ex6 = "Jean Targaryen et Christine Frey,";
 
-        System.out.println("Teste partes: " + getFullNames(ex));
+        System.out.println("First name: " + getFirstNames(ex));
+        System.out.println("Family name: " + getFamilyNames(ex));
+        System.out.println("Full name: " + getFullNames(ex));
+    }
+
+    private static void setAtribute (){
+        strings = null;
+        cont = 0;
+        contAspasD = 2;
+        contAspas = 2;
+        contEspa = 0;
+        contTra = 0;
+        name = "";
+        stringSet = new HashSet<>();
     }
 
     public static Set<String> getFirstNames(String text) {
-
+        setAtribute();
         strings = text.toCharArray();
         for (int i = 0; i < strings.length; i++) {
 
@@ -87,6 +100,7 @@ public class Ex28 {
     }
 
     public static  Set <String> getFamilyNames(String text) {
+        setAtribute();
         strings = text.toCharArray();
         for (int i = 0; i < strings.length; i++) {
 
@@ -147,8 +161,9 @@ public class Ex28 {
     }
 
     public static  Set <String> getFullNames(String text) {
+        setAtribute();
         strings = text.toCharArray();
-        
+
         for (int i = 0; i < strings.length; i++) {
 
             if(strings[i] == '\"'){
