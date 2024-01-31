@@ -22,9 +22,9 @@ public class Ex28 {
         String ex5 = "Francis \"Francis\" Tyrell. Arya Stark et";
         String ex6 = "Jean Targaryen et Christine Frey,";
 
-        System.out.println("First name: " + getFirstNames(ex));
+        //System.out.println("First name: " + getFirstNames(ex));
         System.out.println("Family name: " + getFamilyNames(ex));
-        System.out.println("Full name: " + getFullNames(ex));
+        //System.out.println("Full name: " + getFullNames(ex));
     }
 
     private static void setAtribute (){
@@ -38,24 +38,44 @@ public class Ex28 {
         stringSet = new HashSet<>();
     }
 
+    private static void managerMarks(char letra){
+        if(letra == '\"'){
+            contAspasD --;
+        }
+        if(letra == '\''){
+            contAspas --;
+        }
+    }
+
+    private static void setMarks(int contA, int contAD){
+        if (contA == 0){
+            contAspas = 2;
+        }
+        if (contAD == 0){
+            contAspasD = 2;
+        }
+    }
+
+    private static void managerSpace (int c, int cEspa){
+        if(c == 1 && cEspa == 2){
+            name = "";
+            cont = 0;
+            contEspa = 0;
+        }
+    }
+
     public static Set<String> getFirstNames(String text) {
         setAtribute();
         strings = text.toCharArray();
         for (int i = 0; i < strings.length; i++) {
 
-            if(strings[i] == '\"' && contAspasD == 2){
-                contAspasD --;
+            managerMarks(strings[i]);
+
+            if(contAspasD == 2){
+                managerMarks(strings[i]);
             }
 
-            if(strings[i] == '\''){
-                contAspas --;
-            }
-
-            if(cont == 1 && contEspa == 2){
-                name = "";
-                cont = 0;
-                contEspa = 0;
-            }
+            managerSpace(cont, contEspa);
 
             if (strings[i] != ' ' && contAspasD == 2 && contAspas == 2 && strings[i] != '-' && strings[i] != '.' && strings[i] != ',') {
                 if (strings[i] == Character.toUpperCase(strings[i])) {
@@ -87,14 +107,7 @@ public class Ex28 {
                 contTra++;
             }
 
-
-            if(contAspasD == 0){
-                contAspasD = 2;
-            }
-
-            if(contAspas == 0){
-                contAspas = 2;
-            }
+            setMarks(contAspas, contAspasD);
         }
         return stringSet;
     }
@@ -104,13 +117,7 @@ public class Ex28 {
         strings = text.toCharArray();
         for (int i = 0; i < strings.length; i++) {
 
-            if(strings[i] == '\"'){
-                contAspasD --;
-            }
-
-            if(strings[i] == '\''){
-                contAspas --;
-            }
+            managerMarks(strings[i]);
 
             if(strings[i] == '-' && contAspasD == 2) {
                 contTra++;
@@ -143,19 +150,14 @@ public class Ex28 {
                 contAspasD = 2;
             }
 
-            if(contAspas == 0){
-                contAspas = 2;
-            }
+            setMarks(contAspas, 1);
 
             if(cont == 2 && contTra == 1){
                 contTra = 0;
                 cont = 0;
             }
 
-            if(cont == 1 && contEspa == 2){
-                cont =  0;
-                contEspa = 0;
-            }
+            managerSpace(cont, contEspa);
         }
         return stringSet;
     }
@@ -166,10 +168,7 @@ public class Ex28 {
 
         for (int i = 0; i < strings.length; i++) {
 
-            if(strings[i] == '\"'){
-                contAspasD --;
-            }
-
+            managerMarks(strings[i]);
 
             if(strings[i] != ' ' && strings[i] != '.' && contAspasD == 2 && strings[i] != ',' && strings[i] != '\'') {
                 if (strings[i] == Character.toUpperCase(strings[i])) {
@@ -194,11 +193,7 @@ public class Ex28 {
                 contAspasD = 2;
             }
 
-            if(cont == 1 && contEspa == 2){
-                cont = 0;
-                contEspa = 0;
-                name = "";
-            }
+            managerSpace(cont, contEspa);
 
         }
 
