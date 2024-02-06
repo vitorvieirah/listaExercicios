@@ -16,15 +16,9 @@ public class Ex28 {
                 "ils s\'enquirent de l\'état de Bernard Martell, en convalescence chez Francis \"Francis\" Tyrell. Arya Stark et " +
                 "Christine Frey repartirent vers Port-Royal tandis que Jean Targaryen resta discuter avec Jon \"Sait-Rien\" Stark.";
 
-        String ex2 = "Claude \"Evil\" Baratheon. En croisant Jean Targaryen et Christine Frey,";
-        String ex3 = "ils s\'enquirent de l\'état de Bernard Martell, en convalescence chez Francis \"Francis\" Tyrell. Arya Stark et";
-        String ex4 = "Christine Frey repartirent vers Port-Royal tandis que Jean Targaryen resta discuter avec Jon \"Sait-Rien\" Stark.";
-        String ex5 = "Francis \"Francis\" Tyrell. Arya Stark et";
-        String ex6 = "Jean Targaryen et Christine Frey,";
-
-        //System.out.println("First name: " + getFirstNames(ex));
+        System.out.println("First name: " + getFirstNames(ex));
         System.out.println("Family name: " + getFamilyNames(ex));
-        //System.out.println("Full name: " + getFullNames(ex));
+        System.out.println("Full name: " + getFullNames(ex));
     }
 
     private static void setAtribute (){
@@ -64,6 +58,22 @@ public class Ex28 {
         }
     }
 
+    private static boolean validateAtributeForConcat (int i){
+        return (strings[i] != ' ' && contAspasD == 2 && strings[i] != '.' && strings[i] != ',');
+    }
+
+    private static void setResult (){
+        cont = 0;
+        stringSet.add(name);
+        name = "";
+        contEspa = 0;
+    }
+
+    private static void validateCharUpper(int i){
+        if (strings[i] == Character.toUpperCase(strings[i]))
+            cont++;
+    }
+
     public static Set<String> getFirstNames(String text) {
         setAtribute();
         strings = text.toCharArray();
@@ -77,20 +87,15 @@ public class Ex28 {
 
             managerSpace(cont, contEspa);
 
-            if (strings[i] != ' ' && contAspasD == 2 && contAspas == 2 && strings[i] != '-' && strings[i] != '.' && strings[i] != ',') {
-                if (strings[i] == Character.toUpperCase(strings[i])) {
-                    cont++;
-                }
+            if (contAspas == 2 && strings[i] != '-' && validateAtributeForConcat(i)) {
+                validateCharUpper(i);
                 if (cont == 1) {
                     if (strings[i] != ' ') {
                         name = name.concat(String.valueOf(strings[i]));
                     }
                 } else {
                     if(cont == 2 && contTra != 1){
-                        cont = 0;
-                        stringSet.add(name);
-                        name = "";
-                        contEspa = 0;
+                        setResult();
                     }else {
                         contTra = 0;
                         cont = 0;
@@ -123,10 +128,8 @@ public class Ex28 {
                 contTra++;
             }
 
-            if (strings[i] != ' ' && i != strings.length - 1 && contAspasD == 2 && contAspas == 2 && strings[i] != '.' && strings[i] != '-' && strings[i] != ',') {
-                if (strings[i] == Character.toUpperCase(strings[i])) {
-                    cont++;
-                }
+            if (i != strings.length - 1 && contAspas == 2 && strings[i] != '-' && validateAtributeForConcat(i)) {
+                validateCharUpper(i);
                 if (cont == 2 && contTra == 0) {
                     if (strings[i] != ' ') {
                         name = name.concat(String.valueOf(strings[i]));
@@ -138,11 +141,8 @@ public class Ex28 {
                 }
 
 
-                if(cont == 2){
-                    cont = 0;
-                    contEspa = 0;
-                    stringSet.add(name);
-                    name = "";
+                if(cont == 2) {
+                    setResult();
                 }
             }
 
@@ -170,20 +170,15 @@ public class Ex28 {
 
             managerMarks(strings[i]);
 
-            if(strings[i] != ' ' && strings[i] != '.' && contAspasD == 2 && strings[i] != ',' && strings[i] != '\'') {
-                if (strings[i] == Character.toUpperCase(strings[i])) {
-                    cont++;
-                }
+            if(validateAtributeForConcat(i) && strings[i] != '\'') {
+                validateCharUpper(i);
             }else if (strings[i] == ' ' && cont == 1 && contAspasD == 2){
                 contEspa ++;
             }
 
             if(cont <= 2 && cont >= 1 && contAspasD == 2){
                 if((strings[i] == ' ' && cont == 2) || (strings[i] == '.' && cont == 2) || (strings[i] == ',' && cont == 2)){
-                    cont = 0;
-                    contEspa = 0;
-                    stringSet.add(name);
-                    name = "";
+                    setResult();
                 }else if(strings[i] != ','){
                     name = name.concat(String.valueOf(strings[i]));
                 }
