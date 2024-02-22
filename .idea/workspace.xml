@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex269.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex30.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Ex269.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Ex28.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/Ex28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex28.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex28.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/OrdenandoListAlfabeitca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/OrdenandoListAlfabeitca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrdenandoListAlfabeitca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrdenandoListAlfabeitca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,28 +46,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex269">
-    <configuration name="Ex24" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex24" />
-      <module name="listaExercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex26" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex26" />
-      <module name="listaExercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex269" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex269" />
-      <module name="listaExercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Ex30">
     <configuration name="Ex27" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex27" />
       <module name="listaExercicio" />
@@ -75,6 +56,27 @@
     </configuration>
     <configuration name="Ex28" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex28" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex29" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex29" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex30" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex30" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrdenandoListAlfabeitca" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OrdenandoListAlfabeitca" />
       <module name="listaExercicio" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ex269" />
+        <item itemvalue="Application.Ex30" />
+        <item itemvalue="Application.OrdenandoListAlfabeitca" />
+        <item itemvalue="Application.Ex29" />
         <item itemvalue="Application.Ex28" />
         <item itemvalue="Application.Ex27" />
-        <item itemvalue="Application.Ex26" />
-        <item itemvalue="Application.Ex24" />
       </list>
     </recent_temporary>
   </component>
