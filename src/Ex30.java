@@ -5,17 +5,14 @@ import java.util.Objects;
 
 public class Ex30 {
 
-    static List<Integer> divisores = new ArrayList<>();
-    static List<Integer> divisores2 = new ArrayList<>();
-    static List<Integer> maioresElementos = new ArrayList<>();
-
-
     public static void main(String[] args) {
 
         System.out.println(maoirDivisorComun(15, 17));
     }
 
     private static int maoirDivisorComun(int num1, int num2){
+
+        List<Integer> divisores = new ArrayList<>();
 
         for (int i = 2; i <= num1 || i <= num2; i++) {
             if(num1 % i == 0 && num2 % i == 0){
