@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex31.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Ex30.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/Ex30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Ex28.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/Ex28.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex28.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex28.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex29.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex29.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teste/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teste/Teste.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,20 +126,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Ex28.java</url>
-          <line>78</line>
-          <properties class="Ex28" method="getFirstNames">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

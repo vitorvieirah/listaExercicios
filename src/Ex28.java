@@ -16,11 +16,11 @@ public class Ex28 {
                 "ils s\'enquirent de l\'état de Bernard Martell, en convalescence chez Francis \"Francis\" Tyrell. Arya Stark et " +
                 "Christine Frey repartirent vers Port-Royal tandis que Jean Targaryen resta discuter avec Jon \"Sait-Rien\" Stark.";
 
-        String ex2 = "Vitor Hugo foi a casa de Gustavo \"Gu\" Nakamura e depois se encontrarao com Heitor Gomes e Daniel \"Deni\" Rinaldi";
+        String ex2 = "Vitor Hugo foi a casa de Gustavo \"Gu\" Nakamura e depois se encontrarao com Heitor Gomes e Daniel \"Deni\" Rinaldi.";
 
         System.out.println("First name: " + getFirstNames(ex2));
-        /*System.out.println("Family name: " + getFamilyNames(ex));
-        System.out.println("Full name: " + getFullNames(ex));*/
+        System.out.println("Family name: " + getFamilyNames(ex2));
+        System.out.println("Full name: " + getFullNames(ex2));
     }
 
     private static void setAtribute (){
@@ -37,6 +37,9 @@ public class Ex28 {
     private static void managerMarks(char letra){
         if(letra == '\"'){
             contAspasD --;
+            if(contAspasD == 1){
+                contEspa --;
+            }
         }
         if(letra == '\''){
             contAspas --;
