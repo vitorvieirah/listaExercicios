@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/Ex34.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/Teste/ClasseTesteHector.java" afterDir="false" />
+>>>>>>> desenvolvimento
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Ex33.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/Ex33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Teste/Teste.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/Teste/Teste.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex33.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex33.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teste/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teste/Teste.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -72,9 +80,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Ex34" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex34" />
       <module name="listaExercicio" />
+=======
+    <configuration name="Teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Teste.Teste" />
+      <module name="listaExercicio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+>>>>>>> desenvolvimento
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,9 +116,14 @@
       <list>
         <item itemvalue="Application.Ex34" />
         <item itemvalue="Application.Ex33" />
+        <item itemvalue="Application.Teste" />
+        <item itemvalue="Application.Ex31" />
         <item itemvalue="Application.Ex32" />
         <item itemvalue="Application.Ex28" />
+<<<<<<< HEAD
         <item itemvalue="Application.Ex31" />
+=======
+>>>>>>> desenvolvimento
       </list>
     </recent_temporary>
   </component>

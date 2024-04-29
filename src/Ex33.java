@@ -17,21 +17,37 @@ public class Ex33 {
     public static void main(String[] args) {
         String s = "Dermatoglyphics";
         String s1 = "moose";
-        System.out.println(isIsogram(s1));
+        String s2 = "aba";
+        System.out.println(isIsogram(s2));
     }
 
     public static boolean  isIsogram(String str) {
         String strU = str.toUpperCase();
         char[] letras;
         letras = strU.toCharArray();
+        char[] letrasOrdenadas = ordenaVetor(letras);
+        for (int i = 0; i < letrasOrdenadas.length - 1; i++) {
+            if(letrasOrdenadas[i] == letrasOrdenadas[i + 1])
+                return false;
+        }
+        return true;
+    }
+    
+    private static char[] ordenaVetor(char[] vetor){
+        int tamVetor = vetor.length;
 
-        for (int i = 0; i < letras.length; i++) {
-            for (int j = i + 1; j < letras.length; j++) {
-                if(letras[i] == letras[j])
-                    return false;
+        while(tamVetor > 0){
+            for (int i = 0; i < tamVetor - 1; i++) {
+                char aux;
+                if(vetor[i] > vetor[i + 1]){
+                    aux = vetor[i];
+                    vetor[i] = vetor[i + 1];
+                    vetor[i + 1] = aux;
+                }
             }
+            tamVetor --;
         }
 
-        return true;
+        return vetor;
     }
 }
