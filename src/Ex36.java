@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Ex36 {
     /*O jogo de senha é um jogo da web onde você escreverá uma senha como ela diz, mas tem uma diferença: você tem que seguir algumas regras incrivelmente estúpidas para completar a senha perfeita.
@@ -15,7 +17,7 @@ public class Ex36 {
     O comprimento mínimo da senha é de 20 caracteres ✅
     O comprimento da senha deve ser um número primo ✅
     Deve ter pelo menos 1 letra minúscula, 3 letras maiúsculas e 1 caractere especial ✅
-    A soma de cada um dos dígitos da senha deve ser de no mínimo 25
+    A soma de cada um dos dígitos da senha deve ser de no mínimo 25 ✅
     Deve conter o diminutivo de um mês
     Deve conter a data de hoje
     2 caracteres especiais não podem ficar juntos
@@ -78,5 +80,18 @@ public class Ex36 {
         }
 
         return minuscula && caracterEspecial && contMaiusc == 3;
+    }
+
+    private static boolean validaSomaDigitos(String senha){
+        List<Integer> numeros = new ArrayList<>();
+        char [] senhaChars = senha.toCharArray();
+        for (char senhaChar : senhaChars) {
+            if (senhaChar > 47 && senhaChar < 58)
+                numeros.add((int) senhaChar);
+        }
+
+        Optional<Integer> soma = numeros.stream().reduce(Integer::sum);
+
+        return soma.filter(integer -> integer >= 25).isPresent();
     }
 }
