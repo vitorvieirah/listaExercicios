@@ -21,7 +21,7 @@ public class Ex36 {
     Deve conter o diminutivo de um mês ✅
     Deve conter a data de hoje ✅
     2 caracteres especiais não podem ficar juntos ✅
-    O comprimento da senha deve estar dentro da senha
+    O comprimento da senha deve estar dentro da senha ✅
     Esclarecimentos
     Os meses do ano para este kata são [janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro]
     Os meses podem estar em letras maiúsculas, minúsculas ou combinados
@@ -30,28 +30,38 @@ public class Ex36 {
     Os caracteres especiais para este kata são [-._@#$&]*/
 
     private static final char [] caractersEspeciais = {'-', '.', '_', '@', '#', '$', '&'};
+    private static final String TODAY_DATE = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
     private static String senha;
-    private static char[] senhaChars = senha.toCharArray();
+    private static char[] senhaChars;
+    private static Integer tamSenha;
 
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a senha: ");
+        String password = sc.next();
+        if(validatePassword(password))
+            System.out.println("Senha aprovada");
+        else
+            System.out.println("Senha não aprovada");
     }
 
     public static boolean validatePassword(String password){
-        //Your code here.
-        return false;
+        senha = password;
+        senhaChars = senha.toCharArray();
+        tamSenha = senhaChars.length;
+        return validaTamanho() && validaTamanhoPrimo() && validaLetras() && validaSomaDigitos()
+            && validaMeses() && validaDataHoje() && validaCaractersEspeciais() && validaTamanhoSenhaDentroDaSenha();
     }
 
-    private static boolean validaTamanho(String senha){
+    private static boolean validaTamanho(){
         return senha.length() <= 50 && senha.length() >= 20;
     }
 
     //Ver se não da pra usar recursividade
     private static boolean validaTamanhoPrimo(){
-        int num = senha.length();
-        if(num > 2){
-            for(int i = 2; i < num; i++){
-                if(num % i == 0)
+        if(tamSenha > 2){
+            for(int i = 2; i < tamSenha; i++){
+                if(tamSenha % i == 0)
                     return false;
             }
         }
@@ -63,7 +73,7 @@ public class Ex36 {
         boolean caracterEspecial = false;
         int contMaiusc = 0;
 
-        for (int i = 0; i < senhaChars.length; i++) {
+        for (int i = 0; i < tamSenha; i++) {
             if(senhaChars[i] == Character.toLowerCase(senhaChars[i])) {
                 minuscula = true;
             }
@@ -73,7 +83,7 @@ public class Ex36 {
             }
 
             for (int j = 0; j < caractersEspeciais.length; j++) {
-                if(senhaChars[i] == caractersEspeciais[i]){
+                if(senhaChars[i] == caractersEspeciais[j]){
                     caracterEspecial = true;
                     break;
                 }
@@ -98,7 +108,7 @@ public class Ex36 {
     private static boolean validaMeses(){
         char[] siglaMes = new char[3];
 
-        for (int i = 0; i < senhaChars.length; i++) {
+        for (int i = 0; i < tamSenha; i++) {
             for (int j = 0; j < 3; j++) {
                 siglaMes[j] = senhaChars[j];
             }
@@ -110,25 +120,24 @@ public class Ex36 {
     }
 
     private static boolean validaDataHoje(){
-        String dataAtualFormatada = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         String data;
         char[] siglaData = new char[3];
-        for (int i = 0; i < senhaChars.length; i++) {
+        for (int i = 0; i < tamSenha; i++) {
             for (int j = 0; j < 8; j++) {
                 siglaData[j] = senhaChars[j];
             }
 
             data = Arrays.toString(siglaData);
 
-            if(data.equals(dataAtualFormatada))
+            if(data.equals(TODAY_DATE))
                 return true;
         }
         return false;
     }
 
     private static boolean validaCaractersEspeciais(){
-        for (int i = 0; i < senhaChars.length; i++) {
-            if(validaCaracterEpecial(senhaChars[i])){
+        for (int i = 0; i < tamSenha - 1; i++) {
+            if(validaCaracterEspecial(senhaChars[i])){
                 if(senhaChars[i] == senhaChars[i + 1])
                     return false;
             }
@@ -136,13 +145,21 @@ public class Ex36 {
         return true;
     }
 
-    //tentar implementar recursividade
     private static boolean validaTamanhoSenhaDentroDaSenha(){
-        for (int i = 0; i < senhaChars.length; i++) {
+        String num = "";
+        int numReal;
+        for (int i = 0; i < tamSenha - 1; i++) {
             if (senhaChars[i] > 47 && senhaChars[i] < 58){
-
+                if(senhaChars[i + 1] > 47 && senhaChars[i + 1] < 58){
+                    num = String.valueOf(senhaChars[i]);
+                    num = num.concat(String.valueOf(senhaChars[i + 1]));
+                    numReal = Integer.parseInt(num);
+                    if(numReal == tamSenha)
+                        return true;
+                }
             }
         }
+        return false;
     }
 
     private static boolean validaSiglaMes(char[] sigla){
@@ -154,15 +171,11 @@ public class Ex36 {
         };
     }
 
-    private static boolean validaCaracterEpecial(Character c){
+    private static boolean validaCaracterEspecial(Character c){
         for(Character chr : caractersEspeciais){
             if(c == chr)
                 return true;
         }
         return false;
-    }
-
-    private static void validaProximoNumero(int posicao){
-        if(senhaChars[posicao] )
     }
 }
