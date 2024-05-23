@@ -27,7 +27,12 @@ public class Ex36 {
     Os meses podem estar em letras maiúsculas, minúsculas ou combinados
     A data dentro da senha terá o seguinte formato aaaaMMdd
     Os números de data contam como dígitos normais para a adição de todos
-    Os caracteres especiais para este kata são [-._@#$&]*/
+    Os caracteres especiais para este kata são [-._@#$&]
+
+    Problemas
+    - O numero é considerado minusculo e maisculo, arrumar isso.
+
+    */
 
     private static final char [] caractersEspeciais = {'-', '.', '_', '@', '#', '$', '&'};
     private static final String TODAY_DATE = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
@@ -37,8 +42,9 @@ public class Ex36 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite a senha: ");
-        String password = sc.next();
+        /*System.out.println("Digite a senha: ");
+        String password = sc.next();*/
+        String password = "pass89$OCT" + TODAY_DATE + "len23";
         if(validatePassword(password))
             System.out.println("Senha aprovada");
         else
@@ -57,7 +63,6 @@ public class Ex36 {
         return senha.length() <= 50 && senha.length() >= 20;
     }
 
-    //Ver se não da pra usar recursividade
     private static boolean validaTamanhoPrimo(){
         if(tamSenha > 2){
             for(int i = 2; i < tamSenha; i++){
@@ -72,22 +77,28 @@ public class Ex36 {
         boolean minuscula = false;
         boolean caracterEspecial = false;
         int contMaiusc = 0;
+        int contEsp = 0;
 
         for (int i = 0; i < tamSenha; i++) {
-            if(senhaChars[i] == Character.toLowerCase(senhaChars[i])) {
+            if(!validaIsNumero(senhaChars[i])){
+                for (char caractersEspeciai : caractersEspeciais) {
+                    if (senhaChars[i] == caractersEspeciai) {
+                        caracterEspecial = true;
+                        contEsp++;
+                        break;
+                    }
+                }
+            }
+
+            if(!validaIsNumero(senhaChars[i]) && senhaChars[i] == Character.toLowerCase(senhaChars[i]) && contEsp != 1) {
                 minuscula = true;
             }
 
-            if(senhaChars[i] == Character.toUpperCase(senhaChars[i])) {
+            if(!validaIsNumero(senhaChars[i]) && senhaChars[i] == Character.toUpperCase(senhaChars[i]) && contEsp != 1) {
                 contMaiusc ++;
             }
 
-            for (int j = 0; j < caractersEspeciais.length; j++) {
-                if(senhaChars[i] == caractersEspeciais[j]){
-                    caracterEspecial = true;
-                    break;
-                }
-            }
+            contEsp = 0;
         }
 
         return minuscula && caracterEspecial && contMaiusc == 3;
@@ -177,5 +188,9 @@ public class Ex36 {
                 return true;
         }
         return false;
+    }
+
+    private static boolean validaIsNumero(char letra){
+        return letra > 47 && letra < 58;
     }
 }
