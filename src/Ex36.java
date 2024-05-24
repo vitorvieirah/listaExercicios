@@ -108,7 +108,7 @@ public class Ex36 {
         List<Integer> numeros = new ArrayList<>();
         for (char senhaChar : senhaChars) {
             if (senhaChar > 47 && senhaChar < 58)
-                numeros.add((int) senhaChar);
+                numeros.add(Integer.parseInt(String.valueOf(senhaChar)));
         }
 
         Optional<Integer> soma = numeros.stream().reduce(Integer::sum);
@@ -118,14 +118,22 @@ public class Ex36 {
 
     private static boolean validaMeses(){
         char[] siglaMes = new char[3];
+        boolean aprovado;
 
         for (int i = 0; i < tamSenha; i++) {
+            aprovado = false;
             for (int j = 0; j < 3; j++) {
-                siglaMes[j] = senhaChars[j];
+                if(!validaIsNumero(senhaChars[j+i]) && !validaCaracterEspecial(senhaChars[j+i]))
+                    siglaMes[j] = senhaChars[j + i];
+                else{
+                    aprovado = true;
+                    break;
+                }
             }
-
-            if(validaSiglaMes(siglaMes))
-                return true;
+            if(!aprovado){
+                if(validaSiglaMes(siglaMes))
+                    return true;
+            }
         }
         return false;
     }
@@ -175,9 +183,10 @@ public class Ex36 {
 
     private static boolean validaSiglaMes(char[] sigla){
         String siglaString = Arrays.toString(sigla);
+        siglaString = siglaString.toLowerCase().replaceAll("[\\[\\],]", "");
 
         return switch (siglaString) {
-            case "jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez" -> true;
+            case "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec" -> true;
             default -> false;
         };
     }

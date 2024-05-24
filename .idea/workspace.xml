@@ -158,15 +158,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Ex36.java</url>
-          <line>106</line>
-          <properties class="Ex36" method="validaSomaDigitos">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Ex36.java</url>
           <line>118</line>
           <properties class="Ex36" method="validaMeses">
             <option name="EMULATED" value="true" />
@@ -176,7 +167,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Ex36.java</url>
-          <line>132</line>
+          <line>140</line>
           <properties class="Ex36" method="validaDataHoje">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -185,7 +176,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Ex36.java</url>
-          <line>148</line>
+          <line>156</line>
           <properties class="Ex36" method="validaCaractersEspeciais">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -194,7 +185,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Ex36.java</url>
-          <line>158</line>
+          <line>166</line>
           <properties class="Ex36" method="validaTamanhoSenhaDentroDaSenha">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -203,21 +194,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Ex36.java</url>
-          <line>175</line>
+          <line>183</line>
           <properties class="Ex36" method="validaSiglaMes">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Ex36.java</url>
-          <line>184</line>
-          <properties class="Ex36" method="validaCaracterEspecial">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
