@@ -158,15 +158,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Ex36.java</url>
-          <line>118</line>
-          <properties class="Ex36" method="validaMeses">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Ex36.java</url>
           <line>140</line>
           <properties class="Ex36" method="validaDataHoje">
             <option name="EMULATED" value="true" />

@@ -182,8 +182,9 @@ public class Ex36 {
     }
 
     private static boolean validaSiglaMes(char[] sigla){
-        String siglaString = Arrays.toString(sigla);
-        siglaString = siglaString.toLowerCase().replaceAll("[\\[\\],]", "");
+        String siglaString = "";
+        for(Character c : sigla)
+            siglaString = siglaString.concat(String.valueOf(c)).toLowerCase();
 
         return switch (siglaString) {
             case "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec" -> true;
