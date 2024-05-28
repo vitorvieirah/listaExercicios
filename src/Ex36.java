@@ -140,10 +140,10 @@ public class Ex36 {
 
     private static boolean validaDataHoje(){
         String data;
-        char[] siglaData = new char[3];
-        for (int i = 0; i < tamSenha; i++) {
+        char[] siglaData = new char[8];
+        for (int i = 0; i < tamSenha - 8; i++) {
             for (int j = 0; j < 8; j++) {
-                siglaData[j] = senhaChars[j];
+                 siglaData[j] = senhaChars[i + j];
             }
 
             data = Arrays.toString(siglaData);
