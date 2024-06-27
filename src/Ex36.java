@@ -139,14 +139,17 @@ public class Ex36 {
     }
 
     private static boolean validaDataHoje(){
-        String data;
+        String data = "";
         char[] siglaData = new char[8];
         for (int i = 0; i < tamSenha - 8; i++) {
             for (int j = 0; j < 8; j++) {
                  siglaData[j] = senhaChars[i + j];
             }
 
-            data = Arrays.toString(siglaData);
+            for(Character c : siglaData)
+                data = data.concat(String.valueOf(c));
+
+
 
             if(data.equals(TODAY_DATE))
                 return true;
