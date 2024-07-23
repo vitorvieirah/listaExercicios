@@ -11,37 +11,29 @@ Exemplos
 [1,2,2,3,3,3,4,3,3,3,2,2,1] deve retornar 4, porque aparece 1 vez (o que é ímpar).
  */
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Stream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Ex40 {
     public static void main(String[] args) {
-        findIt(new int[]{20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5});
+        int result = findIt(new int[]{20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5});
+        System.out.println("O número que aparece um número ímpar de vezes é: " + result);
     }
 
     public static int findIt(int[] a) {
-        List<Integer> numbers = new ArrayList<>();
-        for(Integer i : a){
-            numbers.add(i);
+        Map<Integer, Integer> countMap = new HashMap<>();
+
+        for (int num : a) {
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
         }
 
-        numbers.sort(null);
-        int cont = 1;
-        int i;
-        for (i = 0; i < numbers.size() - 1; i++) {
-            if(Objects.equals(numbers.get(i), numbers.get(i + 1))){
-                cont++;
-            }else{
-                if(cont % 2 == 1){
-                    return numbers.get(i);
-                }else{
-                    cont = 1;
-                }
+        for (int num : countMap.keySet()) {
+            if (countMap.get(num) % 2 != 0) {
+                return num;
             }
         }
 
-        return numbers.get(i);
+        throw new IllegalArgumentException("Nenhum número com contagem ímpar encontrado.");
     }
 }
+
