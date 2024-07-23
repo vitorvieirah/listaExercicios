@@ -3,8 +3,6 @@ Sua tarefa é criar uma função que possa receber qualquer número inteiro não
 e retorná-lo com seus dígitos em ordem decrescente. Essencialmente,
 reorganize os dígitos para criar o número mais alto possível.
  */
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex38 {
