@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Ex41.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex41/Opcao9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Ex39.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/Ex39.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex39.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex39.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex40.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex40.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +138,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
