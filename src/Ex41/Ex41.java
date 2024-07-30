@@ -31,6 +31,14 @@ também os resultados, devem ser strings, por causa de '0's iniciais potenciais.
 Detetive, contamos com você!
 */
 
-public class Ex41 {
+import java.util.List;
 
+public class Ex41 {
+    public static List<String> getPINs(String observed) {
+        
+
+
+
+        return null;
+    }
 }
