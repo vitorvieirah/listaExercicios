@@ -31,14 +31,60 @@ também os resultados, devem ser strings, por causa de '0's iniciais potenciais.
 Detetive, contamos com você!
 */
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ex41 {
     public static List<String> getPINs(String observed) {
-        
+        char chars[] = observed.toCharArray();
+
+        for (char c : chars){
+            switch (c){
+                case '1':{
+                    combinacoes1();
+                }
+                case '2':{
+
+                }
+                case '4':{
+
+                }
+                case '5':{
+
+                }
+                case '6':{
+
+                }
+                case '7':{
+
+                }
+                case '8':{
+
+                }
+                case '9':{
+
+                }
+                default:{
+
+                }
+            }
+        }
 
 
 
         return null;
+    }
+
+    private static List<Integer> combinacoes1() {
+
+
+    }
+
+    private static List<Combinacao> combinacoes(List<Integer> numbers, Integer number){
+        List<Combinacao> combinacaos = new ArrayList<>();
+
+        for (Integer i : numbers){
+            combinacaos.add()
+        }
     }
 }
