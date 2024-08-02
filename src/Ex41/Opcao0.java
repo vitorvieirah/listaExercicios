@@ -2,9 +2,9 @@ package Ex41;
 
 import java.util.List;
 
-public class Opcao0 extends Opcao{
+public class Opcao0 extends Opcao {
 
-    public Opcao0(){
-        super(null, List.of(8));
+    public Opcao0() {
+        super(List.of(0), List.of(0, 8));
     }
 }

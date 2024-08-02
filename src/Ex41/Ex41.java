@@ -80,11 +80,11 @@ public class Ex41 {
 
     }
 
-    private static List<Combinacao> combinacoes(List<Integer> numbers, Integer number){
+    private static List<Combinacao> combinacoes(Opcao number){
         List<Combinacao> combinacaos = new ArrayList<>();
 
-        for (Integer i : numbers){
-            combinacaos.add()
+        for (Integer i : number.horizontal){
+
         }
     }
 }
