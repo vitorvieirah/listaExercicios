@@ -36,55 +36,16 @@ import java.util.List;
 
 public class Ex41 {
     public static List<String> getPINs(String observed) {
+        int tamSenha = observed.length();
         char chars[] = observed.toCharArray();
+        int matriz[][] = new int [3][3];
 
-        for (char c : chars){
-            switch (c){
-                case '1':{
-                    combinacoes1();
-                }
-                case '2':{
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
 
-                }
-                case '4':{
-
-                }
-                case '5':{
-
-                }
-                case '6':{
-
-                }
-                case '7':{
-
-                }
-                case '8':{
-
-                }
-                case '9':{
-
-                }
-                default:{
-
-                }
             }
         }
 
 
-
-        return null;
-    }
-
-    private static List<Integer> combinacoes1() {
-
-
-    }
-
-    private static List<Combinacao> combinacoes(Opcao number){
-        List<Combinacao> combinacaos = new ArrayList<>();
-
-        for (Integer i : number.horizontal){
-
-        }
     }
 }
