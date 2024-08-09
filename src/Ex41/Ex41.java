@@ -39,11 +39,61 @@ public class Ex41 {
         int tamSenha = observed.length();
         char chars[] = observed.toCharArray();
         int matriz[][] = new int [3][3];
+        Endereco [] enderecos = new Endereco[2];
+        List<Endereco> combinacoes = new ArrayList<>();
 
+        int value = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-
+                matriz[i][j] = value;
+                value ++;
             }
+        }
+
+
+        for (int i = 0; i < 2; i++) {
+            int valor = chars[i];
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    if(matriz[j][k] == valor){
+                        enderecos[i] = new Endereco(j, k);
+                    }
+                }
+            }
+        }
+
+        for (Endereco end : enderecos) {
+            switch (end.getLinha()){
+                case 1 -> {
+                    if(end.getColuna() != 0)
+                        combinacoes.add(new Endereco(end.getColuna() - 1, end.getLinha()));
+                    if(end.getColuna() != 2)
+                        combinacoes.add(new Endereco(end.getColuna() + 1, end.getLinha()));
+
+                    combinacoes.add(new Endereco(end.getColuna(), end.getLinha() + 1));
+                }
+                case 2 -> {
+                    if(end.getColuna() != 0)
+                        combinacoes.add(new Endereco(end.getColuna() - 1, end.getLinha()));
+
+                    if(end.getColuna() != 2)
+                        combinacoes.add(new Endereco(end.getColuna() + 1, end.getLinha()));
+
+                    combinacoes.add(new Endereco(end.getColuna(), end.getLinha() + 1));
+                    combinacoes.add(new Endereco(end.getColuna(), end.getLinha() - 1));
+                }
+                default -> {
+                    if(end.getColuna() != 0)
+                        combinacoes.add(new Endereco(end.getColuna() - 1, end.getLinha()));
+                    if(end.getColuna() != 2)
+                        combinacoes.add(new Endereco(end.getColuna() + 1, end.getLinha()));
+
+                    combinacoes.add(new Endereco(end.getColuna(), end.getLinha() - 1));
+
+                }
+            }
+
+
         }
 
 
