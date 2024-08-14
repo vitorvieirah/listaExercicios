@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex41/Endereco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex41/Combinacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex41/Combinacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/listaExercicio/Ex40.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/listaExercicio/Ex40.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex41/Ex41.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex41/Ex41.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex41/Opcao9.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +46,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Q12aou03muteRy6xQNRosfCQcx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,21 +59,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/listaExercicios",
+    "last_opened_file_path": "C:/Users/Unicesumar",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Ex40">
-    <configuration name="Ex36" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex36.Ex36" />
-      <module name="listaExercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Ex41">
     <configuration name="Ex37" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex37" />
       <module name="listaExercicio" />
@@ -92,6 +95,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ex41" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex41.Ex41" />
+      <module name="listaExercicio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex41.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="listaExercicios" />
       <method v="2">
@@ -107,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex41" />
         <item itemvalue="Application.Ex40" />
         <item itemvalue="Application.Ex39" />
         <item itemvalue="Application.Ex38" />
         <item itemvalue="Application.Ex37" />
-        <item itemvalue="Application.Ex36" />
       </list>
     </recent_temporary>
   </component>
@@ -136,5 +152,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Ex41/Ex41.java</url>
+          <line>43</line>
+          <properties class="Ex41.Ex41" method="getPINs">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

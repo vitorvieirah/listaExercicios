@@ -33,29 +33,36 @@ Detetive, contamos com você!
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Ex41 {
+
+    public static void main(String[] args) {
+        System.out.println(getPINs("23"));
+    }
+
     public static List<String> getPINs(String observed) {
         int tamSenha = observed.length();
         char chars[] = observed.toCharArray();
-        int matriz[][] = new int [3][3];
-        Endereco [] enderecos = new Endereco[2];
+        int matriz[][] = new int[3][3];
+        Endereco[] enderecos = new Endereco[2];
         List<Endereco> combinacoes = new ArrayList<>();
 
-        int value = 0;
+
+        int value = 1;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 matriz[i][j] = value;
-                value ++;
+                value++;
             }
         }
 
 
         for (int i = 0; i < 2; i++) {
-            int valor = chars[i];
+            int valor = (int) chars[i];
             for (int j = 0; j < 3; j++) {
                 for (int k = 0; k < 3; k++) {
-                    if(matriz[j][k] == valor){
+                    if (matriz[j][k] == valor) {
                         enderecos[i] = new Endereco(j, k);
                     }
                 }
@@ -63,39 +70,40 @@ public class Ex41 {
         }
 
         for (Endereco end : enderecos) {
-            switch (end.getLinha()){
-                case 1 -> {
-                    if(end.getColuna() != 0)
+            switch (end.getLinha()) {
+                case 0 -> {
+                    if (end.getColuna() != 0)
                         combinacoes.add(new Endereco(end.getColuna() - 1, end.getLinha()));
-                    if(end.getColuna() != 2)
+                    if (end.getColuna() != 2)
                         combinacoes.add(new Endereco(end.getColuna() + 1, end.getLinha()));
 
                     combinacoes.add(new Endereco(end.getColuna(), end.getLinha() + 1));
                 }
-                case 2 -> {
-                    if(end.getColuna() != 0)
+                case 1 -> {
+                    if (end.getColuna() != 0)
                         combinacoes.add(new Endereco(end.getColuna() - 1, end.getLinha()));
 
-                    if(end.getColuna() != 2)
+                    if (end.getColuna() != 2)
                         combinacoes.add(new Endereco(end.getColuna() + 1, end.getLinha()));
 
                     combinacoes.add(new Endereco(end.getColuna(), end.getLinha() + 1));
                     combinacoes.add(new Endereco(end.getColuna(), end.getLinha() - 1));
                 }
                 default -> {
-                    if(end.getColuna() != 0)
+                    if (end.getColuna() != 0)
                         combinacoes.add(new Endereco(end.getColuna() - 1, end.getLinha()));
-                    if(end.getColuna() != 2)
+                    if (end.getColuna() != 2)
                         combinacoes.add(new Endereco(end.getColuna() + 1, end.getLinha()));
 
                     combinacoes.add(new Endereco(end.getColuna(), end.getLinha() - 1));
-
                 }
             }
-
-
         }
 
+        Stream<String> result = combinacoes
+                .stream()
+                .map(endereco -> endereco.getColuna() + String.valueOf(endereco.getLinha()));
 
+        return (List<String>) result;
     }
 }
