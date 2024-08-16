@@ -38,13 +38,13 @@ import java.util.stream.Stream;
 public class Ex41 {
 
     public static void main(String[] args) {
-        System.out.println(getPINs("23"));
+        getPINs("23").forEach(System.out::println);
     }
 
-    public static List<String> getPINs(String observed) {
+    public static Stream<String> getPINs(String observed) {
         int tamSenha = observed.length();
-        char chars[] = observed.toCharArray();
-        int matriz[][] = new int[3][3];
+        char[] chars = observed.toCharArray();
+        int[][] matriz = new int[3][3];
         Endereco[] enderecos = new Endereco[2];
         List<Endereco> combinacoes = new ArrayList<>();
 
@@ -59,7 +59,7 @@ public class Ex41 {
 
 
         for (int i = 0; i < 2; i++) {
-            int valor = (int) chars[i];
+            int valor = Integer.parseInt(String.valueOf(chars[i]));
             for (int j = 0; j < 3; j++) {
                 for (int k = 0; k < 3; k++) {
                     if (matriz[j][k] == valor) {
@@ -100,10 +100,8 @@ public class Ex41 {
             }
         }
 
-        Stream<String> result = combinacoes
+        return combinacoes
                 .stream()
                 .map(endereco -> endereco.getColuna() + String.valueOf(endereco.getLinha()));
-
-        return (List<String>) result;
     }
 }
