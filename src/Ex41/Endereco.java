@@ -16,4 +16,12 @@ public class Endereco {
     public int getColuna() {
         return coluna;
     }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "linha=" + linha +
+                ", coluna=" + coluna +
+                '}';
+    }
 }
