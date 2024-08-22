@@ -32,26 +32,33 @@ Detetive, contamos com você!
 */
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 public class Ex41 {
+
+    private static int[][] matriz = new int[4][3];
 
     public static void main(String[] args) {
         getPINs("23").forEach(System.out::println);
     }
 
-    public static List<Combinacao> getPINs(String observed) {
+    public static List<String> getPINs(String observed) {
         int tamSenha = observed.length();
         char[] chars = observed.toCharArray();
-        int[][] matriz = new int[3][3];
         Endereco[] enderecos = new Endereco[2];
         List<Combinacao> combinacoes = new ArrayList<>();
+        Set<String> result = new HashSet<>();
 
 
         int value = 1;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 3; j++) {
+                if(i == 3)
+                    matriz[i][j] = 0;
+
                 matriz[i][j] = value;
                 value++;
             }
@@ -64,6 +71,8 @@ public class Ex41 {
                 for (int k = 0; k < 3; k++) {
                     if (matriz[j][k] == valor) {
                         enderecos[i] = new Endereco(j, k);
+                    }else if (valor == 0){
+                        enderecos[i] = new Endereco(3, 0);
                     }
                 }
             }
@@ -72,36 +81,62 @@ public class Ex41 {
         for (Endereco end : enderecos) {
             switch (end.getLinha()) {
                 case 0 -> {
-                    if (end.getColuna() != 0)
+                    if (end.getColuna() != 0) {
                         combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha(), end.getColuna() - 1))));
+                        combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha(), end.getColuna() - 1), end)));
+                    }
 
-
-                    if (end.getColuna() != 2)
+                    if (end.getColuna() != 2) {
                         combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha(), end.getColuna() + 1))));
+                        combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha(), end.getColuna() + 1), end)));
+                    }
 
-                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna(), end.getLinha() + 1))));
+                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha() + 1, end.getColuna()))));
+                    combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha() + 1, end.getColuna()), end)));
                 }
                 case 1 -> {
-                    if (end.getColuna() != 0)
-                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna() - 1, end.getLinha()))));
+                    if (end.getColuna() != 0) {
+                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha(), end.getColuna() - 1))));
+                        combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha(), end.getColuna() - 1), end)));
+                    }
+                    if (end.getColuna() != 2) {
+                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha(), end.getColuna() + 1))));
+                        combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha(), end.getColuna() + 1), end)));
+                    }
 
-                    if (end.getColuna() != 2)
-                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna() + 1, end.getLinha()))));
-
-                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna(), end.getLinha() + 1))));
-                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna(), end.getLinha() - 1))));
+                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha() + 1, end.getColuna()))));
+                    combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha() + 1, end.getColuna()), end)));
+                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha() - 1, end.getColuna()))));
+                    combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha() - 1, end.getColuna()), end)));
                 }
                 default -> {
-                    if (end.getColuna() != 0)
-                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna() - 1, end.getLinha()))));
-                    if (end.getColuna() != 2)
-                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna() + 1, end.getLinha()))));
+                    if (end.getColuna() != 0) {
+                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha(), end.getColuna() - 1))));
+                        combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha(), end.getColuna() - 1), end)));
+                    }
+                    if (end.getColuna() != 2){
+                        combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha(), end.getColuna() + 1))));
+                        combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha(), end.getColuna() + 1), end)));
+                    }
 
-                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getColuna(), end.getLinha() - 1))));
+                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha() - 1, end.getColuna()))));
+                    combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha() - 1, end.getColuna()), end)));
                 }
             }
         }
 
-        return combinacoes;
+        for (Combinacao comb : combinacoes){
+            result.add(buscarCombinacao(comb));
+        }
+
+        return new ArrayList<>(result);
+    }
+
+    private static String buscarCombinacao(Combinacao comb) {
+        String result = "";
+        for(Endereco end : comb.getCombinacao()){
+            result = result.concat(String.valueOf(matriz[end.getLinha()][end.getColuna()]));
+        }
+        return result;
     }
 }
