@@ -39,10 +39,10 @@ import java.util.stream.Stream;
 
 public class Ex41 {
 
-    private static int[][] matriz = new int[4][3];
+    private static final int[][] matriz = new int[4][3];
 
     public static void main(String[] args) {
-        getPINs("23").forEach(System.out::println);
+        getPINs("60").forEach(System.out::println);
     }
 
     public static List<String> getPINs(String observed) {
@@ -58,9 +58,10 @@ public class Ex41 {
             for (int j = 0; j < 3; j++) {
                 if(i == 3)
                     matriz[i][j] = 0;
-
-                matriz[i][j] = value;
-                value++;
+                else{
+                    matriz[i][j] = value;
+                    value++;
+                }
             }
         }
 
@@ -72,7 +73,7 @@ public class Ex41 {
                     if (matriz[j][k] == valor) {
                         enderecos[i] = new Endereco(j, k);
                     }else if (valor == 0){
-                        enderecos[i] = new Endereco(3, 0);
+                        enderecos[i] = new Endereco(3, 1);
                     }
                 }
             }
@@ -109,7 +110,7 @@ public class Ex41 {
                     combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha() - 1, end.getColuna()))));
                     combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha() - 1, end.getColuna()), end)));
                 }
-                default -> {
+                case 2 -> {
                     if (end.getColuna() != 0) {
                         combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha(), end.getColuna() - 1))));
                         combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha(), end.getColuna() - 1), end)));
@@ -121,6 +122,11 @@ public class Ex41 {
 
                     combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha() - 1, end.getColuna()))));
                     combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha() - 1, end.getColuna()), end)));
+                }
+                default -> {
+                    combinacoes.add(new Combinacao(List.of(end, new Endereco(end.getLinha() - 1, end.getColuna()))));
+                    combinacoes.add(new Combinacao(List.of(new Endereco(end.getLinha() - 1, end.getColuna()), end)));
+
                 }
             }
         }
