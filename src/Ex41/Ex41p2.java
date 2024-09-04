@@ -14,7 +14,7 @@ public class Ex41p2 {
         List<Endereco> outros = new ArrayList<>();
         List<Endereco> enderecos = new ArrayList<>();
         List<Combinacao> combinacoes = new ArrayList<>();
-        List<String> result = new ArrayList<>();
+        //List<String> result = new ArrayList<>();
 
         //preenche matriz
         int value = 1;
@@ -96,23 +96,47 @@ public class Ex41p2 {
             }
         });
 
-        switch (tamSenha){
-            case 1 -> {
-                Endereco end = enderecos.getFirst();
-                result.add(String.valueOf(matriz[end.getLinha()][end.getColuna()]));
-                outros.forEach(endO -> result.add(String.valueOf(matriz[endO.getLinha()][endO.getColuna()])));
+
+        outros.addAll(enderecos);
+
+        int valor;
+        StringBuilder result = new StringBuilder();
+
+        for(Endereco end : enderecos) {
+            valor = matriz[end.getLinha()][end.getColuna()];
+            for (int i = 0; i < outros.size(); i++) {
+                result.append(valor);
+                for (int j = i; j < i + tamSenha; j++) {
+                    if(outros.get(j) != end)
+                        result.append(outros.get(j));
+                    else
+                        result.append(outros.get(j + 1));
+                }
             }
-            case 2 ->{
-                enderecos.forEach(endE -> {
-                    String endER = String.valueOf(matriz[endE.getLinha()][endE.getColuna()]);
-                    outros.forEach(endO -> result.add(endER + matriz[endE.getLinha()][endO.getColuna()]));
-                });
-            }
-
-
-
-
         }
+
+
+
+
+
+
+//        switch (tamSenha){
+//            case 1 -> {
+//                Endereco end = enderecos.getFirst();
+//                result.add(String.valueOf(matriz[end.getLinha()][end.getColuna()]));
+//                outros.forEach(endO -> result.add(String.valueOf(matriz[endO.getLinha()][endO.getColuna()])));
+//            }
+//            case 2 ->{
+//                enderecos.forEach(endE -> {
+//                    String endER = String.valueOf(matriz[endE.getLinha()][endE.getColuna()]);
+//                    outros.forEach(endO -> result.add(endER + matriz[endE.getLinha()][endO.getColuna()]));
+//                });
+//            }
+//
+//
+//
+//
+//        }
 
         return null;
     }
