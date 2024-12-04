@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex43.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex43.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex43.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +53,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex42">
-    <configuration name="Ex38" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex38" />
-      <module name="listaExercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Ex43">
     <configuration name="Ex39" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex39" />
       <module name="listaExercicio" />
@@ -95,6 +88,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ex43" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex43" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="listaExercicios" />
       <method v="2">
@@ -110,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex43" />
         <item itemvalue="Application.Ex42" />
         <item itemvalue="Application.Ex41" />
         <item itemvalue="Application.Ex40" />
         <item itemvalue="Application.Ex39" />
-        <item itemvalue="Application.Ex38" />
       </list>
     </recent_temporary>
   </component>
