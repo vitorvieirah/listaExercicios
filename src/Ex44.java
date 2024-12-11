@@ -15,36 +15,26 @@ Cuidado com certos casos extremos - por exemplo, 1é uma potência de 2desde 2^0
 
 public class Ex44 {
     public static void main(String[] args) {
-        boolean result = isPowerOfTwo(32);
+        boolean result = isPowerOfTwo(0);
         System.out.println(result);
     }
 
 
     public static boolean isPowerOfTwo(long n) {
-//        boolean naoExpoente = false;
-//
-//        while (n > 1 && !naoExpoente) {
-//            if (n % 2 == 0) {
-//                n = n / 2;
-//            } else {
-//                naoExpoente = true;
-//            }
-//        }
-//
-//        if (naoExpoente) {
-//            return false;
-//        }
-
-        long result = calculoExpoente(n);
-
-        return result == 1;
-    }
-
-    private static long calculoExpoente(long exp) {
-        if(exp % 2 == 0) {
-            calculoExpoente(exp / 2);
+        if(n <= 0) {
+            return false;
         }
-        
-        return exp;
+
+        boolean naoExpoente = false;
+
+        while (n > 1 && !naoExpoente) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else {
+                naoExpoente = true;
+            }
+        }
+
+        return !naoExpoente;
     }
 }
