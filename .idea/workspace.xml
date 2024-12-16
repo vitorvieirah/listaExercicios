@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc8a72c-0a27-4a9f-8f8a-505a81bb7d3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex45.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex46.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,20 +53,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex45">
-    <configuration name="Ex41" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex41.Ex41" />
-      <module name="listaExercicio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ex41.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Ex46">
     <configuration name="Ex42" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex42" />
       <module name="listaExercicio" />
@@ -95,6 +82,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ex46" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex46" />
+      <module name="listaExercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="listaExercicios" />
       <method v="2">
@@ -110,11 +104,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex46" />
         <item itemvalue="Application.Ex45" />
         <item itemvalue="Application.Ex44" />
         <item itemvalue="Application.Ex43" />
         <item itemvalue="Application.Ex42" />
-        <item itemvalue="Application.Ex41" />
       </list>
     </recent_temporary>
   </component>
