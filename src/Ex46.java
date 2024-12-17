@@ -70,11 +70,11 @@ public class Ex46 {
 
         for (int i = 0; i < k; i++) {
             Optional<Integer> menorNumero = numsList.stream().min(Integer::compareTo);
-            int indexMenorNumero = numsList.indexOf(menorNumero) + 1;
-
             if(menorNumero.isEmpty()) {
                 throw new RuntimeException("Menor número não encontrado");
             }
+
+            int indexMenorNumero = numsList.indexOf(menorNumero.get());
 
             numsList.set(indexMenorNumero, menorNumero.get() * multiplier);
         }
